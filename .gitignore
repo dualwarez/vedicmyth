@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.log
+
+# Kiro steering, specs and hooks are required by the Kiroween rules.
+# Never add .kiro/ here — doing so disqualifies the submission.

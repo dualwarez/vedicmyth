@@ -1,0 +1,53 @@
+{
+  "id": "standing-water-knee",
+  "depth": "verse-level",
+  "draft": true,
+  "verdict": "myth",
+  "_draftNote": "Verdict is set, but the text layer has no locator yet, so this must not publish. Flip draft to false only after a human confirms a verse locator.",
+
+  "claim": {
+    "canonical": "Drinking water while standing causes fluid to collect in the knees",
+    "variants": [
+      "khade hokar paani peene se paani ghutno me jata hai",
+      "drinking water standing up causes knee fluid",
+      "standing water knee pain ayurveda",
+      "paani ghutno me chala jata hai"
+    ],
+    "topic": "hydration"
+  },
+
+  "text": {
+    "verdict": "silent",
+    "citations": [],
+    "note": "Charaka Samhita, Sutrasthana 27 (Annapanavidhi) does discuss water — its qualities, which water is fit to drink, and how it should be examined before use. What it does not contain is any link between drinking posture and the knees. No verse with that content could be located, so no locator is shown. A claim with no locator is not evidence, whatever a forwarded message says."
+  },
+
+  "practice": {
+    "verdict": "not-recommended",
+    "guideline": null,
+    "whyNot": "No classical text and no current guideline restricts drinking posture. There is nothing to recommend or forbid, which is exactly why the claim survives online: it is unfalsifiable by citation."
+  },
+
+  "evidence": {
+    "grade": null,
+    "summary": "Swallowed water goes to the stomach and is absorbed in the gut. It does not travel to the knee joint, and no proposed mechanism connects drinking posture to joint fluid. Knee swelling has other causes — injury, osteoarthritis, infection, inflammatory disease.",
+    "studies": []
+  },
+
+  "systems": [
+    {
+      "system": "Ayurveda (classical)",
+      "says": "Discusses water quality and examination; silent on drinking posture and knees",
+      "basis": "Charaka, Sutrasthana 27 — chapter scope verified, specific verse not located"
+    },
+    {
+      "system": "Modern medicine",
+      "says": "Posture while drinking is irrelevant to knee effusion",
+      "basis": "No proposed mechanism; knee swelling has separate causes"
+    }
+  ],
+
+  "recommendation": "How you stand while drinking water does not affect your knees. If a knee is swollen or painful, that is a reason to see a doctor — not a reason to change how you drink.",
+
+  "lastVerified": null
+}

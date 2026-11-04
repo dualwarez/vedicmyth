@@ -1,0 +1,25 @@
+{
+  "_note": "Machine-readable mirror of steering/sources.md. The validator reads this; humans read the steering doc. Keep them in sync.",
+  "tier1": [
+    { "name": "WHO", "domains": ["who.int"] },
+    { "name": "ICMR", "domains": ["icmr.gov.in", "icmr.nic.in"] },
+    { "name": "Ministry of AYUSH", "domains": ["ayush.gov.in"] },
+    { "name": "NICE", "domains": ["nice.org.uk"] },
+    { "name": "USPSTF", "domains": ["uspreventiveservicestaskforce.org"] },
+    { "name": "NHS", "domains": ["nhs.uk"] },
+    { "name": "Cochrane", "domains": ["cochrane.org", "cochranelibrary.com"] },
+    { "name": "NHMRC", "domains": ["nhmrc.gov.au"] },
+    { "name": "NCCIH", "domains": ["nccih.nih.gov"] },
+    { "name": "EFSA", "domains": ["efsa.europa.eu"] }
+  ],
+  "tier2": [
+    { "name": "PubMed / MEDLINE", "domains": ["pubmed.ncbi.nlm.nih.gov", "ncbi.nlm.nih.gov"] },
+    { "name": "CTRI", "domains": ["ctri.nic.in"] },
+    { "name": "ClinicalTrials.gov", "domains": ["clinicaltrials.gov"] },
+    { "name": "ISRCTN", "domains": ["isrctn.com"] }
+  ],
+  "blocked": {
+    "reason": "Tier 3 — can be recorded only as the claim being checked, never as support.",
+    "categories": ["news", "press release", "brand/company page", "preprint", "social media", "content farm", "encyclopedia"]
+  }
+}

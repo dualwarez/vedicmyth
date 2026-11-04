@@ -1,0 +1,441 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.shell {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 5rem;
+}
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.wordmark {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.wordmark span {
+  color: var(--accent);
+}
+
+.masthead p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.02em;
+  text-align: right;
+}
+
+/* ---------- search ---------- */
+
+.checker {
+  margin: 2.5rem 0 0;
+}
+
+.checker label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  margin-bottom: 0.6rem;
+}
+
+.checker input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.checker input:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.checker .hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+
+/* ---------- claim ---------- */
+
+.claim {
+  margin-top: 2.75rem;
+}
+
+.claim-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.claim h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.3;
+  margin: 0.6rem 0 0;
+  text-wrap: balance;
+}
+
+.verdict-slot {
+  margin-top: 1.25rem;
+}
+
+.banner {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem 0.85rem;
+  flex-wrap: wrap;
+  padding: 0.9rem 1rem;
+  border-left: 6px solid var(--no-source);
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--no-source) 10%, var(--paper-raised));
+}
+
+.banner-label {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--no-source);
+}
+
+.banner-reason {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.banner--myth {
+  border-left-color: var(--myth);
+  background: color-mix(in srgb, var(--myth) 12%, var(--paper-raised));
+}
+.banner--myth .banner-label {
+  color: var(--myth);
+}
+
+.banner--fact {
+  border-left-color: var(--fact);
+  background: color-mix(in srgb, var(--fact) 11%, var(--paper-raised));
+}
+.banner--fact .banner-label {
+  color: var(--fact);
+}
+
+.banner--mixed {
+  border-left-color: var(--conditional);
+  background: color-mix(in srgb, var(--conditional) 12%, var(--paper-raised));
+}
+.banner--mixed .banner-label {
+  color: var(--conditional);
+}
+
+.draft-flag {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.3rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: var(--radius);
+}
+
+/* ---------- layers ---------- */
+
+.layer {
+  margin-top: 2.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.layer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.layer-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.22rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.chip--myth { color: var(--myth); }
+.chip--fact { color: var(--fact); }
+.chip--no-source { color: var(--no-source); }
+.chip--conditional { color: var(--conditional); }
+
+/* ---------- verse ---------- */
+
+.verse {
+  margin: 0;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.verse-locator {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.7rem;
+}
+
+.verse blockquote {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.verse figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.verse figcaption a {
+  color: var(--accent);
+}
+
+/* ---------- empty / no source ---------- */
+
+.empty {
+  padding: 1.25rem 1.15rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--no-source);
+  border-radius: var(--radius);
+}
+
+.empty strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.empty p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.why-not {
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+  background: color-mix(in srgb, var(--myth) 6%, var(--paper-raised));
+  border-left: 3px solid var(--myth);
+  border-radius: var(--radius);
+}
+
+.why-not strong {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--myth);
+}
+
+.why-not p {
+  margin: 0.4rem 0 0;
+  font-size: 0.92rem;
+}
+
+/* ---------- citations ---------- */
+
+.source-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.6rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.86rem;
+}
+
+.source-line:last-child {
+  border-bottom: none;
+}
+
+.source-tier {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  padding: 0.12rem 0.35rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  color: var(--ink-faint);
+}
+
+.source-line a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.source-name {
+  font-weight: 500;
+}
+
+.source-link {
+  color: var(--ink-faint) !important;
+  font-size: 0.74rem;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule-strong) !important;
+}
+
+.source-line .meta {
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+}
+
+/* ---------- recommendation ---------- */
+
+.recommendation {
+  margin-top: 2.5rem;
+  padding: 1.35rem 1.4rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+}
+
+.recommendation .layer-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation p {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* ---------- actions ---------- */
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding: 0.55rem 0.9rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn--primary {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.btn--primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---------- footer ---------- */
+
+.disclaimer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  line-height: 1.6;
+}
+
+.disclaimer strong {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+  .masthead p {
+    text-align: left;
+  }
+}
